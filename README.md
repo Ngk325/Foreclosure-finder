@@ -29,6 +29,13 @@ cp .env.example .env.local   # fill in Firebase + Claude values
 
 ### 1. Firebase
 
+Two ways to provision the project — pick one:
+
+- **Terraform** (`infra/terraform/`): creates the GCP project, enables Firebase + Firestore,
+  and outputs both the dashboard's `VITE_FIREBASE_*` config and the Worker's service-account
+  JSON key. See `infra/terraform/README.md`. Skip to step 6 below once applied.
+- **Manual**, via the Firebase Console:
+
 1. Create a project at [console.firebase.google.com](https://console.firebase.google.com).
 2. Enable **Firestore Database** in production mode.
 3. Deploy `firestore.rules` (Firestore Console → Rules, or `firebase deploy --only firestore:rules`

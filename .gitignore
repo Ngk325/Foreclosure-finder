@@ -6,3 +6,11 @@ dist/
 *.log
 .wrangler/
 .DS_Store
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+infra/terraform/terraform.tfvars
+infra/terraform/*.tfplan
