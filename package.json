@@ -1,0 +1,24 @@
+{
+  "name": "foreclosure-scanner",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Foreclosure deal scanner: Jud.ct.gov scraping, Firebase Firestore storage, and Claude-powered multi-perspective deal analysis.",
+  "scripts": {
+    "postinstall": "npm install --prefix src/dashboard",
+    "dev:dashboard": "cd src/dashboard && npm run dev",
+    "build:dashboard": "cd src/dashboard && npm run build",
+    "worker:dev": "wrangler dev workers/scheduler.js",
+    "worker:deploy": "wrangler deploy workers/scheduler.js",
+    "test:scraper": "node scripts/test-scraper.js",
+    "test:claude": "node scripts/test-claude.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.14.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

@@ -1,0 +1,6 @@
+# Copy to terraform.tfvars and fill in. Never commit terraform.tfvars.
+
+project_id      = "foreclosure-finder-28b66"
+project_name    = "Foreclosure-finder"
+org_id          = null # or your GCP organization ID
+billing_account = null # e.g. "012345-6789AB-CDEF01" — required for most Firebase features beyond the free tier
