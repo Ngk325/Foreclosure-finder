@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Foreclosure deal scanner: Jud.ct.gov scraping, Firebase Firestore storage, and Claude-powered multi-perspective deal analysis.",
   "scripts": {
+    "postinstall": "npm install --prefix src/dashboard",
     "dev:dashboard": "cd src/dashboard && npm run dev",
     "build:dashboard": "cd src/dashboard && npm run build",
     "worker:dev": "wrangler dev workers/scheduler.js",
